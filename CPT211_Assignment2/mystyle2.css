@@ -1,0 +1,445 @@
+/*********MASTER STYLE********/
+/*Set border box for every component*/
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+/*Setting for background colour and margin*/
+body {
+	margin: 0px;
+}
+
+/*Set top padding on every section*/
+section {
+	padding-top: 25px;
+}
+
+/*********NAVIGATION BAR STYLE********/
+/*Setting for navigation bar*/
+.navBar {
+	overflow: hidden;
+	background-color: rgba(0,0,0,.7);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: top 0.3s;
+}
+
+/*Setting for navigation bar for right-hand side element*/
+.navBar-right {
+	float: right;
+}
+
+/*Setting for the elements in navigation bar*/
+.navigation {
+	float: left;
+	text-align: center;
+	padding: 12px 20px;
+	text-decoration: none;
+	color: white;	
+	font-size: 15px;
+	font-family: "Lato", sans-serif;
+	font-weight: bold;
+}
+
+/*Setting for change in colour when cursor point on navigation key*/
+.navigation:hover {
+	background-color: #808080;
+	color: black;
+}
+
+/*********COVER STYLE********/
+/*Setting for all items in class container*/
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+	font-family: Stencil Std, fantasy;
+	font-size: 35px;
+	letter-spacing: 7px;
+	text-shadow: 5px 5px 10px black;
+}
+
+/*Setting for Cover Image*/
+.titleImage {
+	background: url(images/sea.gif);
+	background-repeat: no-repeat;
+	height: 720px;
+	width: 100%;
+	opacity: 0.8;
+}
+
+/*Setting for centralized the floating text*/
+.centered {
+	position: absolute;
+	top: 55.5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+}
+
+/*Setting for floating text*/
+.floating-text{
+	text-transform: uppercase;
+	font-size: 50px;
+	font-weight: 900;
+	letter-spacing: 6px;
+	color: #ffffff;
+	transform: translateY(0);
+	animation: floatWord1 3s infinite linear;
+}
+
+/*floating effect for floatWord1*/
+@keyframes floatWord1 {
+	30% {transform: translateY(10%) rotate(4deg);}
+	70% {transform: translateY(10%) rotate(-4deg);}
+}
+
+/*Scrolldown icon*/
+.scrollDown {
+	position: absolute;
+	bottom: 20px;
+	left: 720px;
+	right: 720px;
+}
+
+/*********CONTENT STYLE********/
+/*Setting for all items in class content*/
+.content {
+	background: url(images/star.gif);
+	background-position: center;
+	background-size: cover;
+	cursor: url('images/pointer.ICO'), pointer; /*specific cursor in content area when hover*/
+}
+
+/*Specific cursor in content area when user clicking the mouse*/
+.content:active {
+	cursor: url('images/pointer_active.ICO'), pointer;
+}
+
+/*Setting for glowing title for each section*/
+.glowTitle {
+	font-family: Stencil Std, fantasy;
+	letter-spacing: 3px;
+	color: #fff;
+	font-size: 40px;
+	text-align: center;
+	-webkit-animation: glow 1s ease-in-out infinite alternate;
+	-moz-animation: glow 1s ease-in-out infinite alternate;
+	animation: glow 1s ease-in-out infinite alternate;
+}
+
+/*Animation for glowing text --> set to different color from time to time*/
+@-webkit-keyframes glow { /*A keyframe defines the style that will be applied for that moment within the animation.*/
+	from { /*start of the animation*/
+	  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #504192, 0 0 40px #504192, 0 0 50px #504192, 0 0 60px #504192, 0 0 70px #504192;
+	}
+	to {   /*end of the animation*/
+	  text-shadow: 0 0 20px #fff, 0 0 30px #9795a0, 0 0 40px #9795a0, 0 0 50px #9795a0, 0 0 60px #9795a0, 0 0 70px #9795a0, 0 0 80px #9795a0;
+	}
+}
+
+/*******CONTENT STYLE********/
+/*Setting for content of 'Overview'*/
+.overview {
+	max-width: 100%;
+	margin-bottom: 50px;
+	background: rgba(255,255,255,.7);
+	font-size: 18px;
+	text-align: center;
+	padding:30px;
+	text-transform: uppercase;
+}
+
+/*Setting for slide box*/
+.slideBox {
+	max-width: 100%;
+	margin-top: 20px ;
+	margin-bottom: 50px;
+	margin-left:30px;
+	margin-right:30px;
+	background: rgba(255,255,255,.7);
+	padding: 30px;
+	font-family: serif;
+	font-size: 18px;
+	text-align:center;
+	line-height: 1.3;
+	border-radius: 25px;
+}
+
+.information{
+	height: 525px;
+	position: relative;
+	margin:auto;
+}
+
+#circle1{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: 1s;
+}
+
+#circle2{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: 1s;
+}
+
+#circle3{
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	transition: 1s;
+}
+
+.basic {
+	width: 20px;
+	position: absolute;
+	display:flex;
+	font-size: 25px;
+	color: rgba(130,130,130,.8);
+}
+
+.one{
+	top: 200px;
+	right: 100px; 
+}
+
+.two{
+	top: 50px;
+	left: 250px; 
+	transform: rotate(-90deg);
+}
+
+.three{
+	bottom: 200px;
+	left: 100px; 
+	transform: rotate(-180deg);
+}
+
+.four{
+	bottom: 50px;
+	right: 250px; 
+	transform: rotate(-270deg);
+}
+
+.pic1{
+	width:200px;
+	position: absolute;
+	top: 50%;
+	left:13%;
+	transform: translateY(-50%);
+}
+
+.pic2{
+	width:150px;
+	position: absolute;
+	top: 50%;
+	left:15%;
+	transform: translateY(-50%);
+}
+
+.pic3{
+	width:150px;
+	position: absolute;
+	top: 45%;
+	left:15%;
+	transform: translateY(-50%);
+}
+
+.control{
+	position: absolute;
+	text-align: center;
+	transform: translate(700px, -450px);
+	overflow: auto;
+}
+
+.control div{
+	width: 400px;
+}
+
+#word1{
+	font-size:25px;
+}
+
+#word2{
+	font-size:25px;
+}
+
+#word3{
+	font-size:25px;
+}
+
+#up1{
+	width: 50px;
+	cursor: pointer;
+}
+
+#up1:hover{
+	background-color: rgba(150,150,150,1);
+}
+
+#down1{
+	width: 50px;
+	cursor: pointer;
+}
+
+#down1:hover{
+	background-color: rgba(150,150,150,1);
+}
+
+#up2{
+	width: 50px;
+	cursor: pointer;
+}
+
+#up2:hover{
+	background-color: rgba(150,150,150,1);
+}
+
+#down2{
+	width: 50px;
+	cursor: pointer;
+}
+
+#down2:hover{
+	background-color: rgba(150,150,150,1);
+}
+
+#up3{
+	width: 50px;
+	cursor: pointer;
+}
+
+#up3:hover{
+	background-color: rgba(150,150,150,1);
+}
+
+#down3{
+	width: 50px;
+	cursor: pointer;
+}
+
+#down3:hover{
+	background-color: rgba(150,150,150,1);
+}
+
+.overlay{
+	width: 0;
+	height: 0;
+	border-top: 250px solid rgba(130,130,130,1);
+	border-bottom: 250px solid rgba(130,130,130,1);
+	border-left: 250px solid rgba(130,130,130,1);
+	border-right: 250px solid transparent;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/*******ABOUT US STYLE********/
+/*Setting for 'about us' section*/
+#aboutus {
+	margin: auto;
+	background: rgba(0,0,0,.8);
+	padding: 12px;
+	font-size: 16px;
+	text-align: center;
+	color: white;
+	cursor: url('images/thirty.png'), pointer; /*specific cursor in content area when hover*/
+}
+
+/*Setting for title 'about us'*/
+.title1 {
+	font-family: Stencil Std, fantasy;
+	text-align: center;
+}
+
+/*Setting for content of 'about us'*/
+.groupIntro {
+	max-width: 100%;
+	margin: auto;
+	font-size: 18px;
+	text-align: center;
+	padding: 20px;
+}
+
+/*Setting for all the content of portfolio*/
+.portfolioItems {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /*three columns with 1 fr unit*/
+	width: auto;
+}
+
+/*Setting for each portfolio --> each team member*/
+.portfolioItem {
+	position: relative; /* allow the flexibility of the position */
+	background-color: #000;
+}
+
+/*Setting for the photo of team member*/
+.portfolioImageBackground {
+	height: 350px;
+	width: 100%;
+	background-size: cover;  /* make sure the images of different sizes can fit perfectly */
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.5;
+}
+
+/*Setting for the place where the text will be shown on the photo*/
+.imageText {
+	position: absolute; /* forcing the element to be at some not-common place */
+	word-wrap: break-word;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	text-align: center;
+	padding-left: 100px;
+	padding-right: 80px;
+}
+
+/*Setting for the text on the photo*/
+.imageText .subtitle {
+	transition: 1s;
+	font-weight: 600;
+	color: transparent;	/*will be hidden when no mouseover*/
+}
+
+/*Setting for the email on the photo*/
+.imageText .email a{
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: 1s;
+	font-weight: 600;
+	color: transparent;	/*will be hidden when no mouseover*/
+}
+
+/*Setting for the text (when mouseover the photo)*/
+.imageText:hover .subtitle {
+font-weight: 600;
+color: rgb(30, 253, 238);
+}
+
+/*Setting for the email (when mouseover the photo)*/
+.imageText:hover .email a{
+font-weight: 600;
+color: yellowgreen;
+}
